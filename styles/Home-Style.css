@@ -1,0 +1,612 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --header-color: rgb(31, 10, 12);
+    --p-color: rgb(28, 27, 27);
+    --h1-font-size: 3.125rem;
+    --h2-font-size: 2.125rem;
+    --h3-font-size: 1.5rem;
+    --bg-color-1: #FBECED;
+    --Btn-color: #E11B14;
+    --font: "DM Sans", sans-serif;
+}
+main{
+    padding: 3rem 8%;
+}
+header{
+    width: 100%;
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),  url(http://royal-shoes.local/wp-content/uploads/2024/05/image-1716424826_11.png);
+    
+    /*linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(images/pinkshoe.webp);*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    z-index: 1000;
+}
+.logo{
+    width: 100px;
+    height: 50px;
+}
+.shop-btn{
+    display: none;
+}
+.mobile-icon button{
+    padding: .5rem;
+    background-color: transparent;
+    border: solid 1px var(--Btn-color);
+    cursor: pointer;
+}
+nav svg{
+    width: 20px;
+    height: 20px;
+    fill: var(--Btn-color);
+    transition: 1s ease-in-out;
+}
+ .open-svg-icon{
+    display: none;
+}
+.close-svg{
+  display: none;
+}
+.close-svg-icon{
+    display: block;
+}
+
+
+.mobile-nav{
+    background-color: white;
+    position: absolute;
+    top: 0;
+    transform: translateY(6rem);
+    width: 100%;
+    left:-100rem;
+    z-index: -10;
+    padding-bottom: 1rem;
+    transition: .5s ease-in-out;
+}
+.show{
+   left: 0;
+   transition: .5s ease-in-out;
+}
+ul li{
+    padding: 1rem 1.5rem;
+    border-bottom: solid 1px rgb(222, 222, 222);
+}
+ul li a{
+    text-decoration: none;
+    color: var(--header-color);
+    font-size: 1rem;
+    font-family: var(--font);   
+    transition: .2s ease-in-out;
+}
+ul li a:hover{
+    color: var(--Btn-color);
+}
+.content{
+    padding: 0 15%;
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+}
+.banner-content{
+   
+    background-color: white;
+    min-height: 300px;
+    position: absolute;
+    bottom: 0;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;  
+    text-align: center;
+    padding: 3rem 1.5rem;
+    
+}
+span{
+    font-size: 13px;
+    font-family: var(--font);
+    color:var(--header-color);
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+h1{
+    font-size: 2rem;
+    color: var(--header-color);
+    margin: 1rem 0;
+}
+p{
+    font-size: 1rem;
+    font-family: var(--font);
+    color: var(--p-color); 
+    line-height: 1.5rem; 
+}
+.banner-content a{
+    text-decoration: none;
+    color: white;
+}
+.banner-content button{
+    padding: 14px 32px;
+    background-color: var(--Btn-color);
+    border-radius: 40px;
+    font-size: 1rem;
+    border: none;
+   font-weight: 700;
+    color: white;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+.banner-content button:hover{
+    background-color: #ae0600;
+}
+h2{
+    font-size: 26px;
+   font-family: var(--font);
+   margin: 1rem 0;
+
+}
+
+.main1{
+    padding: 4rem 8%;
+    width: 100%;
+    background-color: var(--bg-color-1);
+    text-align: center;
+}
+.col-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: .5rem;
+}
+.col-container .col img{
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+h3{
+    font-size: 22px;
+    font-family: var(--font);
+    margin-bottom: .5rem;
+}
+.button-span{
+    color: var(--Btn-color);
+    font-weight: 700;
+    font-family: var(--font);
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase; 
+    transition: .2s ease-in-out;
+}
+.button-span:hover{
+    color:  #ae0600;
+}
+.col p{
+    margin-bottom: 1rem;
+}
+.col{
+    background-color: white;
+    padding: 2rem 1rem;
+}
+.col1{
+    margin-top: 2rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.col3{
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.main2 .child2{
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+a{
+    text-decoration: none;
+}
+.main2 .parent{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem;
+}
+.main2 a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+.main2 a:hover{
+    color: black;
+}
+.main2{
+    padding: 4rem 8%;
+    width: 100%;
+    
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(http://royal-shoes.local/wp-content/uploads/2024/05/image-1716424826_6.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.main2 span{
+    font-size: 13px;
+    font-family: var(--font);
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+}
+.main2 h2{
+    color: white;
+}
+.main2 button{
+    padding: 14px 32px;
+    border-radius: 40px;
+    background: transparent;
+    color: white;
+    border: solid 2px white;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: .2s ease;
+}
+.main2 button:hover{
+    background-color: white;
+    color: black
+}
+.main2 .parent{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+.main3{
+    width: 100%;
+    padding: 3rem ;
+    text-align: center;
+    background-color: var(--bg-color-1);
+}
+.main3 button{
+    padding: 14px 32px;
+    background-color: var(--Btn-color);
+    border-radius: 40px;
+    font-size: 1rem;
+    border: none;
+    font-weight: bold;
+    color: white;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+.main3 button:hover{
+    background-color: #ae0600;
+}
+.main4{
+    text-align: center;
+}
+.main4 img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.main4 .parent{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 0;
+    margin-top: 2rem;
+}
+.main4 .parent .container1 img{
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.main4 .parent .container2 .con4 img{
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.main5{
+    text-align: center;
+    background-color: var(--bg-color-1);
+}
+.main5 .parent svg{
+    width: 25px;
+    fill: var(--Btn-color);
+    margin-bottom: 1rem;
+}
+.main5 .parent {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 2rem;
+    gap: .6rem;
+}
+.main5 .parent .con{
+    padding: 1rem;
+    background-color: white;
+    text-align: left;
+}
+.main5 .parent .con1{
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.main5 .parent .con3{
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.main5 .parent .id img{
+    border-radius: 50%;
+}
+.main5 .parent .id{
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+    gap: .5rem;
+}
+h4{
+    font-family: var(--font);
+    margin-bottom: .5rem;
+    font-size: 1rem;
+}
+.main6 .parent{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: .6rem;
+    margin-top: 2rem;
+}
+.main6 .parent .con{
+    background-color: var(--bg-color-1);
+    padding: 1rem;
+}
+.main6 .parent .con1{
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.main6 .parent .con4{
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.main7{
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgb(0,0,0,0.5)),  url(http://royal-shoes.local/wp-content/uploads/2024/05/image-1716424826_9.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 8rem;
+}
+.main7 .holder{
+    background-color: white;
+    padding: 1rem;
+    text-align: center;
+    margin: auto;
+    inset: 0;
+    border-radius: 1rem;
+}
+.main7 button{
+    padding: 14px 32px;
+    background-color: var(--Btn-color);
+    border-radius: 40px;
+    font-size: 1rem;
+    border: none;
+    font-weight: bold;
+    color: white;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.scroll-up-icon{
+   color :white;
+   background-color: var(--Btn-color);
+   font-size: 1.5rem;
+   padding: 0;
+   width: 20px;
+   text-align: center;
+    transform: rotate(270deg);
+    padding: 5px 0;
+   text-decoration: none;
+   position: fixed;
+   right: 4rem;
+   top: 90%;
+   font-weight: 700;
+   z-index: 1999999;
+   display: none;
+}
+.display-scroll-up-icon{
+    display: block;
+}
+
+@media (width >= 40em){
+    .logo{
+        width: 180px;
+        height: auto;
+    }
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    h3{
+        font-size: 24px;
+    }
+}
+@media (width >= 60em){
+    .shop-btn{
+        display: block;
+        padding: 14px 32px;
+        background-color: transparent;
+        border-radius: 40px;
+        font-size: 1rem;
+        border: 2px solid var(--Btn-color);
+         font-weight: 700;
+        color: var(--Btn-color);
+        font-weight: 500;
+        cursor: pointer;
+        transition: .2s ease-in-out;
+    }
+    .shop-btn:hover{
+        color: white;
+        background-color: var(--Btn-color);
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .mobile-nav{
+        position: initial;
+        transform: translateY(0);
+        width: auto;
+        padding: 0;
+        transition: .5s ease-in-out;
+    }
+    ul{
+        display: flex;
+        align-items: center;
+    }
+    ul li{
+        display: inline;
+        padding: 0 1rem;
+        border: none;
+    }
+    .mobile-icon{
+        display: none;
+    }
+    h1{
+        font-size: 3.125rem;
+    }
+    h2{
+        font-size: 2.125rem;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    p{
+        font-size:16px
+    }
+    .banner-content{
+        padding: 2rem 4rem;
+    }
+    .main1 .col-container{
+        margin-top: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .main1 .col-container .col1{
+        margin-top: 0;
+    }
+    .main2 .parent{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .main4 .container2{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: .5rem;
+    }
+    .main4 .container2 .con4 img{
+        border-bottom-left-radius: 0;
+    }
+    .main4 .container2 .con3 img{
+        border-bottom-left-radius: 1rem;
+    }
+
+    .main5 .parent{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .main5 .parent p{
+        font-size: 18p;
+    }
+    .main5 .parent .con{
+        padding: 2rem ;
+    }
+    .main5 .parent .con1 .main6 .parent .con1{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 1rem;
+    }
+    .main5 .parent .con3 {
+        border-top-right-radius: 1rem;
+        border-bottom-left-radius: 0;
+    }
+    .main6 .parent{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .main6 .parent p{
+        font-size: 1rem;
+    }
+    .main6 .parent .con4{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .main6 .parent .con3{
+        border-bottom-left-radius: 1rem;
+    }
+    .main6 .parent .con2{
+        border-top-right-radius: 1rem;
+    }
+    .main6 .parent .con1{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 1
+    }
+    .main7 .holder{
+        padding: 4rem ;
+    }
+    .main7 .holder p{
+        font-size: 1rem;
+    }
+}
+@media (width >= 63em){
+    header{
+        height: 100vh;
+    }
+    .banner-content{
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+    .banner-content p{
+       padding: 0 5%;
+    }
+    .main4 .parent{
+        grid-template-columns: repeat(2, 1fr);
+        gap: .5rem;
+    }
+    .main4 .container1 img{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 1rem;
+    }
+    .main4 .container2 .con4 img{
+        border-bottom-left-radius: 0;
+    }
+    .main4 .container2 .con2 img{
+        border-top-right-radius: 1rem;
+    }
+    .main4 .container2 .con3 img{
+        border-bottom-left-radius: 0;
+    }
+    .main6{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+    .main6 h2{
+        text-transform: none;
+        letter-spacing: normal;
+    }
+    .main7 p{
+        padding: 0 20%;
+    }
+}
